@@ -9,6 +9,8 @@ echo "Node name is: ${env.NODE_NAME}"
 echo "Build number is: ${env.BUILD_NUMBER}"
 
 try{
+  SendSlackNotifications('STARTED')
+  
 stage('CheckoutCode')
 {
 git branch: 'development', credentialsId: '27cbb011-ffd2-4fb6-8984-7c3826a4ffe7', url: 'https://github.com/Shiva-DevOps-Batch/maven-web-application.git'
