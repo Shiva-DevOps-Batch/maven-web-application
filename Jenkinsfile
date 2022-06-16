@@ -44,5 +44,4 @@ currentBuild.result = "FAILED"
   finally{
   SendSlackNotifications(currentBuild.result)
   }
-}
-} //node closing
+}//node closing
